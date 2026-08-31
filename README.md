@@ -1,3 +1,7 @@
+# GEP-Engine
+
+A custom game engine developed in C++.
+
 ## About
 
 GEP-Engine is a custom game engine developed in C++.
