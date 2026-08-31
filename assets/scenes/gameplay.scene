@@ -1,0 +1,429 @@
+{
+  "camera": { "position": [ 0, 0, -1 ] },
+  "game_objects": [
+    {
+      "name": "Player",
+      "position": [ 0, 0, 0 ],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "texture": "Player",
+          "color": [ 255, 255, 255, 255 ],
+          "size": [ 100, 100 ]
+        },
+        {
+          "type": "PlayerMovement",
+          "speed": 250
+        },
+        {
+          "type": "PlayerHealthComponent",
+          "maxHP": 100
+        },
+        {
+          "type": "PlayerWeapon",
+          "attackRadius": 50.0,
+          "damage": 10.0,
+          "attackInterval": 1.0
+        },
+        {
+          "type": "AnimationComponent",
+          "rows": 10,
+          "animations": {
+            "idle": {
+              "row": 0,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.2
+            },
+            "idle_right": {
+              "row": 1,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.1
+            },
+            "idle_down": {
+              "row": 2,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.1
+            },
+            "walk_down": {
+              "row": 3,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.1
+            },
+            "walk_right": {
+              "row": 4,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.08
+            },
+            "walk_up": {
+              "row": 5,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.08
+            },
+            "attack_down": {
+              "row": 6,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.15,
+              "loop": false
+            },
+            "attack_right": {
+              "row": 7,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.15,
+              "loop": false
+            },
+            "attack_up": {
+              "row": 8,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.15,
+              "loop": false
+            },
+            "death": {
+              "row": 9,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.2,
+              "loop": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enemy1",
+      "position": [ 1000, 0, 0 ],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "texture": "Skeleton",
+          "color": [ 255, 255, 255, 255 ],
+          "size": [ 100, 100 ]
+        },
+        {
+          "type": "ChaseBehavior",
+          "speed": 150,
+          "chaseRadius": 500
+        },
+        {
+          "type": "EnemyHealthComponent",
+          "maxHP": 50
+        },
+        {
+          "type": "EnemyWeaponComponent",
+          "attackRadius": 40,
+          "damage": 5,
+          "attackInterval": 1.5
+        },
+        {
+          "type": "AnimationComponent",
+          "rows": 12,
+          "columns": 6,
+          "animations": {
+            "idle": {
+              "row": 0,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.2
+            },
+            "idle_right": {
+              "row": 1,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.1
+            },
+            "idle_up": {
+              "row": 2,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.1
+            },
+            "walk_down": {
+              "row": 3,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.1
+            },
+            "walk_right": {
+              "row": 4,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.08
+            },
+            "walk_up": {
+              "row": 5,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.08
+            },
+            "death": {
+              "row": 6,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.2
+            },
+            "takeDamage_down": {
+              "row": 7,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.15,
+              "loop": false
+            },
+            "takeDamage_right": {
+              "row": 8,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.15,
+              "loop": false
+            },
+            "takeDamage_up": {
+              "row": 9,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.15,
+              "loop": false
+            },
+            "attack_down": {
+              "row": 10,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.15,
+              "loop": false
+            },
+            "attack_right": {
+              "row": 11,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.15,
+              "loop": false
+            },
+            "attack_up": {
+              "row": 12,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.15,
+              "loop": false
+            }
+          }
+        },
+        {
+          "type": "RespawnComponent",
+          "respawnTime": 10.0,
+          "minSpawnArea": [ -500, 0, 0 ],
+          "maxSpawnArea": [ 500, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "name": "Enemy2",
+      "position": [ -1000, 0, 0 ],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "texture": "Skeleton",
+          "color": [ 255, 255, 255, 255 ],
+          "size": [ 100, 100 ]
+        },
+        {
+          "type": "ChaseBehavior",
+          "speed": 150,
+          "chaseRadius": 500
+        },
+        {
+          "type": "EnemyHealthComponent",
+          "maxHP": 50
+        },
+        {
+          "type": "EnemyWeaponComponent",
+          "attackRadius": 40,
+          "damage": 5,
+          "attackInterval": 1.5
+        },
+        {
+          "type": "AnimationComponent",
+          "rows": 12,
+          "columns": 6,
+          "animations": {
+            "idle": {
+              "row": 0,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.2
+            },
+            "idle_right": {
+              "row": 1,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.1
+            },
+            "idle_up": {
+              "row": 2,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.1
+            },
+            "walk_down": {
+              "row": 3,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.1
+            },
+            "walk_right": {
+              "row": 4,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.08
+            },
+            "walk_up": {
+              "row": 5,
+              "columns": 6,
+              "startFrame": 0,
+              "frameCount": 6,
+              "frameTime": 0.08
+            },
+            "death": {
+              "row": 6,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.2
+            },
+            "takeDamage_down": {
+              "row": 7,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.15,
+              "loop": false
+            },
+            "takeDamage_right": {
+              "row": 8,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.15,
+              "loop": false
+            },
+            "takeDamage_up": {
+              "row": 9,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.15,
+              "loop": false
+            },
+            "attack_down": {
+              "row": 10,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.15,
+              "loop": false
+            },
+            "attack_right": {
+              "row": 11,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.15,
+              "loop": false
+            },
+            "attack_up": {
+              "row": 12,
+              "columns": 4,
+              "startFrame": 0,
+              "frameCount": 4,
+              "frameTime": 0.15,
+              "loop": false
+            }
+          }
+        },
+        {
+          "type": "RespawnComponent",
+          "respawnTime": 10.0,
+          "minSpawnArea": [ -500, 0, 0 ],
+          "maxSpawnArea": [ 500, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "name": "Heart1",
+      "position": [ 200, 0, 0 ],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "texture": "Heart",
+          "color": [ 255, 255, 255, 255 ],
+          "size": [ 50, 50 ]
+        },
+        {
+          "type": "PickupComponent",
+          "radius": 50.0
+        },
+        {
+          "type": "RespawnComponent",
+          "respawnTime": 7.0,
+          "minSpawnArea": [ -500, 0, 0 ],
+          "maxSpawnArea": [ 500, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "name": "Heart2",
+      "position": [ 400, 50, 0 ],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "texture": "Heart",
+          "color": [ 255, 255, 255, 255 ],
+          "size": [ 50, 50 ]
+        },
+        {
+          "type": "PickupComponent",
+          "radius": 50.0
+        },
+        {
+          "type": "RespawnComponent",
+          "respawnTime": 5.0,
+          "minSpawnArea": [ -500, 0, 0 ],
+          "maxSpawnArea": [ 500, 0, 0 ]
+        }
+      ]
+    }
+  ]
+}

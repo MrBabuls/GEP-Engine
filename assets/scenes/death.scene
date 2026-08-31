@@ -1,0 +1,40 @@
+{
+  "camera": {
+    "position": [0, 0, -1]
+  },
+  "game_objects": [
+    {
+      "name": "DeathSceneCamera",
+      "position": [0, 0, 0],
+      "components": []
+    },
+    {
+      "name": "YouDiedTitle",
+      "position": [0, 100, 0],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "texture": "YouDiedUI",
+          "color": [255, 255, 255, 255],
+          "size": [256, 64]
+        }
+      ]
+    },
+    {
+      "name": "BackButton",
+      "position": [0, 0, 0],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "texture": "ReturnMainMenuButton",
+          "color": [255, 255, 255, 255],
+          "size": [160, 48]
+        },
+        {
+          "type": "UIButtonComponent",
+          "targetScene": "assets/scenes/mainmenu.scene"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "camera": {
+    "position": [0, 0, -1]
+  },
+  "game_objects": [
+    {
+      "name": "MainMenuCamera",
+      "position": [0, 0, 0],
+      "components": []
+    },
+    {
+      "name": "PlayButton",
+      "position": [0, 0, 0],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "texture": "PlayButton",
+          "color": [255, 255, 255, 255],
+          "size": [96, 48]
+        },
+        {
+          "type": "UIButtonComponent",
+          "targetScene": "assets/scenes/gameplay.scene"
+        }
+      ]
+    }
+  ]
+}
