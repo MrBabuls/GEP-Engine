@@ -6,6 +6,7 @@
 #include "Core/PlayerHealthComponent.h"
 #include "Rendering/Camera.h"
 #include "Rendering/SpriteRenderer.h"
+#include "World/WorldGenerator.h"
 #include "InputManager.h"
 #include "Time.h"
 
@@ -79,6 +80,10 @@ bool Engine::initialize(const char* title, int width, int height)
 
     SceneManager::Instance().LoadScene("assets/scenes/mainmenu.scene"); 
     Scene* scene = SceneManager::Instance().GetActiveScene();
+
+    WorldGenerator worldGenerator;
+    worldGenerator.Generate(*scene);
+
     scene->GetCamera().SetResolution(glm::vec2(width, height));
 
     m_spriteShader->Use();

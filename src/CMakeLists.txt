@@ -54,7 +54,10 @@ add_executable(GEP
     "Core/UIButtonComponent.h" 
     "Core/UIButtonComponent.cpp"  
     "Core/RespawnComponent.h" 
-    "Core/RespawnComponent.cpp")
+    "Core/RespawnComponent.cpp" 
+    
+    "World/WorldGenerator.h" 
+    "World/WorldGenerator.cpp")
 
 set_property(TARGET GEP PROPERTY CXX_STANDARD 20)
 set_property(TARGET GEP PROPERTY CXX_STANDARD_REQUIRED ON)
